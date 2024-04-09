@@ -87,6 +87,8 @@
         .search-input:focus {
             width: 300px; /* Expanded width */
             outline: none; /* Remove the default focus outline */
+            text-align: left; /* Align text to the left when input is expanded */
+            padding-left: 15px; /* Add left padding when input is expanded */
         }
 
         .search-btn {
@@ -127,10 +129,10 @@
 <header>
     <!-- Sign In, Sign Up, and Search buttons in a container -->
     <div class="buttons-container">
-        <a href="#home"><img src="home" width="30" height="30" /> Home</a>
-        <a href="#movies"><img src="movies" width="30" height="30" /> Movies</a>
-        <a href="#about"><img src="tvshow" width="30" height="30" /> Tv Shows</a>
-        <a href="#contact"><img src="shop" width="30" height="30" /> Shop</a>
+        <a href="#home"><img src="home.png" width="30" height="30" /> Home</a>
+        <a href="#movies"><img src="movies.png" width="30" height="30" /> Movies</a>
+        <a href="#about"><img src="tvshow.png" width="30" height="30" /> Tv Shows</a>
+        <a href="#contact"><img src="shop.png" width="30" height="30" /> Shop</a>
         <a href="#signup" class="signup-btn">Sign Up</a>
         <a href="#signin" class="signin-btn">Sign In</a>
         <div class="search-container">
@@ -169,8 +171,14 @@
         input.classList.toggle('expanded');
         var overlay = document.querySelector('.search-overlay');
         overlay.style.display = input.classList.contains('expanded') ? 'flex' : 'none';
+        if (input.classList.contains('expanded')) {
+            input.placeholder = 'Please search here';
+        } else {
+            input.placeholder = 'Search';
+        }
     }
 </script>
 
 </body>
 </html>
+
