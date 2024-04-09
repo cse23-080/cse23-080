@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Movie Universe</title>
+    <link rel="stylesheet" href="styles.css">
+         <style>
+        /* CSS for navigation buttons */
+        nav {
+            background-color: skyblue;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            border-radius: 20px; /* Make it an oval shape */
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#movies">Movies</a></li>
+
+            <li><a href="#Tv Shows">Tv Shows</a></li>
+
+            <li><a href="#Shop">Shop</a></li>
+
+            <li><a href="#Apps and Games">Apps and Games</a><li>
+
+        </ul>
+    </nav>
+
+</header>
+
+<footer>
+    <p>&copy; 2024 Movie Universe. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
