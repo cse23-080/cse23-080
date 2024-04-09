@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Warners Bro</title>
+    <title>Welcome to Warner Bros</title>
     <style>
         /* Additional CSS for navigation buttons */
         .buttons-container {
@@ -14,15 +14,19 @@
         }
 
         .buttons-container a {
-            flex: 1;
+            display: flex;
+            align-items: center;
             color: white;
             text-decoration: none;
-            border-radius: 20px; /* Make it an oval shape */
             padding: 10px 20px;
-            background-color: darkgrey; /* Set background color to sky blue */
+            background-color: darkgrey;
             transition: background-color 0.3s;
             margin-right: 20px;
-            text-align: center;
+            border-radius: 20px; /* Make it an oval shape */
+        }
+
+        .buttons-container a img {
+            margin-right: 10px; /* Adjust the space between image and text */
         }
 
         .buttons-container a:last-child {
@@ -30,7 +34,7 @@
         }
 
         .buttons-container a:hover {
-            background-color: rgba(135, 206, 235, 0.8); /* Light sky blue on hover */
+            background-color: rgba(135, 206, 235, 0.8);
         }
 
         /* Additional CSS for Sign In and Sign Up buttons */
@@ -59,13 +63,36 @@
         }
 
         /* Additional CSS for Search button */
+        .search-container {
+            position: relative;
+        }
+
+        .search-input {
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            width: 50px; /* Initial width */
+            transition: width 0.4s ease-in-out;
+            text-align: center;
+        }
+
+        .search-input:focus {
+            width: 200px; /* Expanded width */
+            outline: none; /* Remove the default focus outline */
+        }
+
         .search-btn {
+            position: absolute;
+            right: 10px; /* Adjust position */
+            top: 50%;
+            transform: translateY(-50%);
             background-color: #555;
             color: white;
             border: none;
             border-radius: 50%; /* Make it a circle */
             padding: 10px;
-            text-decoration: none;
             transition: background-color 0.3s;
         }
 
@@ -79,13 +106,16 @@
 <header>
     <!-- Sign In, Sign Up, and Search buttons in a container -->
     <div class="buttons-container">
-        <a href="#home"><img src="home" width="50" height="30" /> Home</a>
-        <a href="#movies"><img src="movies" width="50" height="30" /> Movies</a>
-        <a href="#about"><img src="tvshow" width="50" height="30" />Tv Shows</a>
-        <a href="#contact"><img src="shop" width="50" height="30" /> Shop</a>
+        <a href="#home"><img src="home.png" width="30" height="30" /> Home</a>
+        <a href="#movies"><img src="movies.png" width="30" height="30" /> Movies</a>
+        <a href="#about"><img src="tvshow.png" width="30" height="30" /> Tv Shows</a>
+        <a href="#contact"><img src="shop.png" width="30" height="30" /> Shop</a>
         <a href="#signup" class="signup-btn">Sign Up</a>
         <a href="#signin" class="signin-btn">Sign In</a>
-        <button class="search-btn">&#128269;</button>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="search-btn">&#128269;</button>
+        </div>
     </div>
 </header>
 
@@ -94,7 +124,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>WARNER BROS</h1>
-            <p>Explore the cinematic world like never before.Best movies, series, catoons, and many more!!</p>
+            <p>Explore the cinematic world like never before. Best movies, series, cartoons, and many more!</p>
             <a href="#movies" class="nav-button">Explore Movies</a>
         </div>
     </section>
@@ -106,7 +136,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2024 Movie Universe. All rights reserved.</p>
+    <p>&copy; 2024 Warner Bros. All rights reserved.</p>
 </footer>
 
 </body>
