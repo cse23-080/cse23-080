@@ -18,26 +18,14 @@
             font-family: Arial, sans-serif; /* Use a common font for better readability */
         }
 
-        /* Header styling */
-        header {
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        /* Logo */
-        .logo {
-            float: left;
-        }
-
-        .logo img {
-            width: 100px;
-            height: auto;
-        }
-
-        /* Navigation buttons */
+        /* Additional CSS for navigation buttons */
         .buttons-container {
-            float: right;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1; /* Ensure the header is above the main content */
         }
 
         .buttons-container a {
@@ -64,19 +52,64 @@
             background-color: rgba(135, 206, 235, 0.8);
         }
 
-        /* Main content styling */
-        main {
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
+        /* Additional CSS for Search button */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            transition: width 0.4s ease-in-out;
         }
 
-        /* Footer styling */
-        footer {
-            width: 100%;
+        .search-input {
+            background-color: #555;
+            color: white;
+            border: none;
             padding: 10px;
-            box-sizing: border-box;
+            width: 50px; /* Initial width */
+            transition: width 0.4s ease-in-out;
             text-align: center;
+            border-radius: 20px; /* Make it an oval shape */
+            font-family: Arial, sans-serif;
+        }
+
+        .search-input:focus {
+            width: 300px; /* Expanded width */
+            outline: none; /* Remove the default focus outline */
+            text-align: left; /* Align text to the left when input is expanded */
+            padding-left: 15px; /* Add left padding when input is expanded */
+            background-image: none; /* Remove background image when input is focused */
+        }
+
+        .search-btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 20px; /* Make it an oval shape */
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background-color: #777;
+        }
+
+        /* Additional CSS for Sign In and Sign Up buttons */
+        .signin-signup-btn {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            background-color: #555;
+            border-radius: 20px; /* Make it an oval shape */
+        }
+
+        .signin-signup-btn:hover {
+            background-color: #777;
         }
     </style>
 </head>
@@ -88,12 +121,16 @@
         <img src="warner bros" alt="Warner Bros Logo">
     </div>
 
-    <!-- Navigation buttons -->
+    <!-- Combined Sign Up / Sign In button and Search button -->
     <div class="buttons-container">
         <a href="#home"><img src="home" width="30" height="30" /> Home</a>
         <a href="#movies"><img src="movies" width="30" height="30" /> Movies</a>
         <a href="#about"><img src="tvshow" width="30" height="30" /> Tv Shows</a>
         <a href="#contact"><img src="shop" width="30" height="30" /> Shop</a>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="search-btn">&#128269;</button>
+        </div>
         <a href="#signup" class="signin-signup-btn">Sign Up / Sign In</a>
     </div>
 </header>
