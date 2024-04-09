@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Warner Bros</title>
     <style>
+        /* Reset default margin and padding */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set background color of the page to black */
+        body {
+            background-color: black;
+            color: white; /* Set text color to white */
+            font-family: Arial, sans-serif; /* Use a common font for better readability */
+        }
+
         /* Additional CSS for navigation buttons */
         .buttons-container {
             padding: 10px 0;
@@ -12,6 +25,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            z-index: 1; /* Ensure the header is above the main content */
         }
 
         .buttons-container a {
@@ -129,11 +143,17 @@
             position: absolute;
             top: 10px;
             left: 10px;
+            z-index: 2; /* Ensure the logo is above the header */
         }
 
         .logo img {
             width: 100px;
             height: auto;
+        }
+
+        /* Main content styling */
+        main {
+            padding-top: 100px; /* Adjust padding to prevent content from being hidden under the header */
         }
     </style>
 </head>
@@ -150,7 +170,7 @@
         <a href="#home"><img src="home" width="30" height="30" /> Home</a>
         <a href="#movies"><img src="movies" width="30" height="30" /> Movies</a>
         <a href="#about"><img src="tvshow" width="30" height="30" /> Tv Shows</a>
-        <a href="#contact"><img src="shop" width="30" height="30" /> Shop</a>
+        <a href="#contact"><img src="shop width="30" height="30" /> Shop</a>
         <a href="#signup" class="signup-btn">Sign Up</a>
         <a href="#signin" class="signin-btn">Sign In</a>
         <div class="search-container">
