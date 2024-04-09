@@ -81,6 +81,7 @@
             transition: width 0.4s ease-in-out;
             text-align: center;
             border-radius: 20px; /* Make it an oval shape */
+            font-family: Arial, sans-serif;
         }
 
         .search-input:focus {
@@ -114,15 +115,10 @@
             pointer-events: none; /* Allow interaction with elements behind */
         }
 
-        .blurred-text {
-            color: transparent;
-            font-size: 18px;
-            filter: blur(5px);
-        }
-
-        .search-expanded .blurred-text {
-            color: black; /* Visible text color */
-            transition: color 0.5s ease-in-out; /* Smooth color transition */
+        .search-overlay-text {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
         }
     </style>
 </head>
@@ -141,7 +137,7 @@
             <input type="text" class="search-input" placeholder="Search">
             <button class="search-btn" onclick="toggleSearch()">&#128269;</button>
             <div class="search-overlay">
-                <div class="blurred-text">Please search here</div>
+                <div class="search-overlay-text">Please search here</div>
             </div>
         </div>
     </div>
