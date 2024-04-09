@@ -11,6 +11,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .buttons-container a {
@@ -64,41 +65,64 @@
 
         /* Additional CSS for Search button */
         .search-container {
-            position: relative;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            transition: width 0.4s ease-in-out;
         }
 
         .search-input {
             background-color: #555;
             color: white;
             border: none;
-            border-radius: 50%;
             padding: 10px;
             width: 50px; /* Initial width */
             transition: width 0.4s ease-in-out;
             text-align: center;
+            border-radius: 20px; /* Make it an oval shape */
         }
 
         .search-input:focus {
-            width: 200px; /* Expanded width */
+            width: 300px; /* Expanded width */
             outline: none; /* Remove the default focus outline */
         }
 
         .search-btn {
-            position: absolute;
-            right: 10px; /* Adjust position */
-            top: 50%;
-            transform: translateY(-50%);
             background-color: #555;
             color: white;
             border: none;
-            border-radius: 50%; /* Make it a circle */
             padding: 10px;
-            transition: background-color 0.3s;
+            border-radius: 20px; /* Make it an oval shape */
             cursor: pointer;
         }
 
         .search-btn:hover {
             background-color: #777;
+        }
+
+        .search-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none; /* Allow interaction with elements behind */
+        }
+
+        .blurred-text {
+            color: transparent;
+            font-size: 18px;
+            filter: blur(5px);
+        }
+
+        .search-expanded .blurred-text {
+            color: black; /* Visible text color */
+            transition: color 0.5s ease-in-out; /* Smooth color transition */
         }
     </style>
 </head>
@@ -116,6 +140,9 @@
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Search">
             <button class="search-btn" onclick="toggleSearch()">&#128269;</button>
+            <div class="search-overlay">
+                <div class="blurred-text">Please search here</div>
+            </div>
         </div>
     </div>
 </header>
@@ -144,7 +171,8 @@
     function toggleSearch() {
         var input = document.querySelector('.search-input');
         input.classList.toggle('expanded');
-        input.focus();
+        var overlay = document.querySelector('.search-overlay');
+        overlay.classList.toggle('search-expanded');
     }
 </script>
 
