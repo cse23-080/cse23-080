@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Movie Universe</title>
-    <link rel="stylesheet" href="styles.css">
-      <style>
+    <style>
         /* Additional CSS for navigation buttons */
         .buttons-container {
             padding: 10px 0;
@@ -53,23 +52,31 @@
 <body>
 
 <header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-
-            <li><a href="#movies">Movies</a></li>
-
-            <li><a href="#Tv Shows">Tv Shows</a></li>
-
-            <li><a href="#Shop">Shop</a></li>
-
-            <li><a href="#Apps and Games">Apps and Games</a><li>
-
-        </ul>
-    </nav>
-    <ul><li><a href="#signin/signup">SignUp/SignIn</a></li></ul>
-
+    <!-- Sign In and Sign Up buttons in a container -->
+    <div class="buttons-container">
+        <a href="#home">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#about">Tv Shows</a>
+        <a href="#contact">Shop</a>
+        <a href="#signin">Sign In/Sign Up</a>
+    </div>
 </header>
+
+<main>
+    <!-- Placeholder content -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Movie Universe</h1>
+            <p>Explore the cinematic world like never before.</p>
+            <a href="#movies" class="nav-button">Explore Movies</a>
+        </div>
+    </section>
+
+    <section id="movies" class="movies-section">
+        <h2>Featured Movies</h2>
+        <!-- Placeholder content -->
+    </section>
+</main>
 
 <footer>
     <p>&copy; 2024 Movie Universe. All rights reserved.</p>
