@@ -5,38 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Movie Universe</title>
     <link rel="stylesheet" href="styles.css">
-         <style>
-        /* CSS for navigation buttons */
-        nav {
-            background-color: skyblue;
+      <style>
+        /* Additional CSS for navigation buttons */
+        .buttons-container {
             padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
-        nav ul li {
-            margin-right: 20px;
-        }
-
-        nav ul li a {
+        .buttons-container a {
+            flex: 1;
             color: white;
             text-decoration: none;
             border-radius: 20px; /* Make it an oval shape */
             padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+            background-color: skyblue; /* Set background color to sky blue */
             transition: background-color 0.3s;
-            display: inline-block;
+            margin-right: 20px;
+            text-align: center;
         }
 
-        nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white on hover */
+        .buttons-container a:last-child {
+            margin-right: 0;
+        }
+
+        .buttons-container a:hover {
+            background-color: rgba(135, 206, 235, 0.8); /* Light sky blue on hover */
+        }
+
+        /* Additional CSS for Sign In and Sign Up buttons */
+        .signin-btn, .signup-btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 20px; /* Make it an oval shape */
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .signin-btn:hover, .signup-btn:hover {
+            background-color: #777;
         }
     </style>
 </head>
