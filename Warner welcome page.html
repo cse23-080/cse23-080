@@ -35,16 +35,41 @@
 
         /* Additional CSS for Sign In and Sign Up buttons */
         .signin-btn, .signup-btn {
-            background-color: #555;
             color: white;
             border: none;
-            border-radius: 20px; /* Make it an oval shape */
             padding: 10px 20px;
             text-decoration: none;
             transition: background-color 0.3s;
         }
 
+        .signin-btn {
+            background-color: #555;
+            border-top-left-radius: 20px; /* Rounded top-left corner */
+            border-bottom-left-radius: 20px; /* Rounded bottom-left corner */
+        }
+
+        .signup-btn {
+            background-color: #555;
+            border-top-right-radius: 20px; /* Rounded top-right corner */
+            border-bottom-right-radius: 20px; /* Rounded bottom-right corner */
+        }
+
         .signin-btn:hover, .signup-btn:hover {
+            background-color: #777;
+        }
+
+        /* Additional CSS for Search button */
+        .search-btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 50%; /* Make it a circle */
+            padding: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
             background-color: #777;
         }
     </style>
@@ -52,13 +77,15 @@
 <body>
 
 <header>
-    <!-- Sign In and Sign Up buttons in a container -->
+    <!-- Sign In, Sign Up, and Search buttons in a container -->
     <div class="buttons-container">
         <a href="#home">Home</a>
         <a href="#movies">Movies</a>
         <a href="#about">Tv Shows</a>
         <a href="#contact">Shop</a>
-        <a href="#signin">Sign In/Sign Up</a>
+        <a href="#signup" class="signup-btn">Sign Up</a>
+        <a href="#signin" class="signin-btn">Sign In</a>
+        <button class="search-btn">&#128269;</button>
     </div>
 </header>
 
@@ -66,7 +93,7 @@
     <!-- Placeholder content -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Movie Universe</h1>
+            <h1>WARNER BROS</h1>
             <p>Explore the cinematic world like never before.</p>
             <a href="#movies" class="nav-button">Explore Movies</a>
         </div>
