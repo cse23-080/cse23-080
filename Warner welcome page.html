@@ -19,13 +19,16 @@
         }
 
         /* Additional CSS for navigation buttons */
-        .buttons-container {
+       .buttons-container {
             padding: 10px 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-            z-index: 1; /* Ensure the header is above the main content */
+            position: fixed; /* Position the navigation fixed at the top */
+            top: 0; /* Align it to the top of the viewport */
+            width: 100%; /* Make it span the entire width of the viewport */
+            z-index: 999; /* Set a high z-index to keep it above other elements */
+        }
         }
 
         .buttons-container a {
