@@ -8,14 +8,30 @@
         /* CSS for styling the form */
         body {
             font-family: Arial, sans-serif; /* Use a common font for better readability */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            overflow: hidden; /* Hide overflow to prevent scrolling */
+        }
+
+        /* CSS for the video */
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire viewport */
+            z-index: -1; /* Place the video behind other content */
         }
 
         form {
             max-width: 400px; /* Adjust the maximum width as needed */
             margin: 50px auto; /* Center the form horizontally */
             padding: 20px;
-            background-color: #f0f0f0; /* Light gray background color */
+            background-color: rgba(240, 240, 240, 0.8); /* Light gray background color with transparency */
             border-radius: 10px;
+            position: relative; /* Set position relative to allow z-index to work */
+            z-index: 1; /* Place the form above the video */
         }
 
         label {
@@ -53,22 +69,21 @@
 </head>
 <body>
     <video autoplay loop muted>
-    <source src="video3.mov" type="video/mp4">
-    
-</video>
+        <source src="video3.mov" type="video/mp4">
+    </video>
 
-<form action="#" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
 
-    <input type="submit" value="Submit">
-</form>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 </html>
