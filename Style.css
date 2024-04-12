@@ -9,6 +9,9 @@
             background-color: black;
             color: white; /* Set text color to white */
             font-family: Arial, sans-serif; /* Use a common font for better readability */
+            margin: 0;
+            padding: 0;
+            background-color: grey;
         }
 
         /* Additional CSS for navigation buttons */
@@ -30,7 +33,7 @@
             background-color: black;
             transition: background-color 0.3s;
             margin-right: 20px;
-            border-radius: 20px; /* Make it an oval shape */
+            border-radius: 15px; /* Make it an oval shape */
         }
 
         .buttons-container a img {
@@ -58,7 +61,7 @@
         }
 
         .search-input {
-            background-color: #555;
+            background-color:dark grey;
             color: white;
             border: none;
             padding: 10px;
@@ -78,7 +81,7 @@
         }
 
         .search-btn {
-            background-color: #555;
+            background-color: dark grey;
             color: white;
             border: none;
             padding: 10px;
@@ -87,7 +90,7 @@
         }
 
         .search-btn:hover {
-            background-color: #777;
+            background-color: white;
         }
 
         /* Additional CSS for Sign In and Sign Up buttons */
@@ -97,11 +100,22 @@
             padding: 10px 20px;
             text-decoration: none;
             transition: background-color 0.3s;
-            background-color: #555;
+            background-color: dark gey;
             border-radius: 20px; /* Make it an oval shape */
+        }
+     body {
+           
+        }
+
+        .block {
+            background-color:white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .signin-signup-btn:hover {
-            background-color: #777;
+            background-color:  white;
         }
     
