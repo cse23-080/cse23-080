@@ -1,0 +1,107 @@
+ /* Reset default margin and padding */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set background color of the page to black */
+        body {
+            background-color: black;
+            color: white; /* Set text color to white */
+            font-family: Arial, sans-serif; /* Use a common font for better readability */
+        }
+
+        /* Additional CSS for navigation buttons */
+       .buttons-container {
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1; /* Ensure the header is above the main content */
+        }
+
+        .buttons-container a {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: black;
+            transition: background-color 0.3s;
+            margin-right: 20px;
+            border-radius: 20px; /* Make it an oval shape */
+        }
+
+        .buttons-container a img {
+            margin-right: 10px; /* Adjust the space between image and text */
+        }
+
+        .buttons-container a:last-child {
+            margin-right: 0;
+        }
+
+        .buttons-container a:hover {
+            background-color: rgba(135, 206, 235, 0.8);
+        }
+
+        /* Additional CSS for Search button */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .search-input {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 50px; /* Initial width */
+            transition: width 0.4s ease-in-out;
+            text-align: center;
+            border-radius: 20px; /* Make it an oval shape */
+            font-family: Arial, sans-serif;
+        }
+
+        .search-input:focus {
+            width: 300px; /* Expanded width */
+            outline: none; /* Remove the default focus outline */
+            text-align: left; /* Align text to the left when input is expanded */
+            padding-left: 15px; /* Add left padding when input is expanded */
+            background-image: none; /* Remove background image when input is focused */
+        }
+
+        .search-btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 20px; /* Make it an oval shape */
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background-color: #777;
+        }
+
+        /* Additional CSS for Sign In and Sign Up buttons */
+        .signin-signup-btn {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            background-color: #555;
+            border-radius: 20px; /* Make it an oval shape */
+        }
+
+        .signin-signup-btn:hover {
+            background-color: #777;
+        }
+    
