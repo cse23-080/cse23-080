@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Warner Bros</title>
-     <link href = "Style.css" rel= "stylesheet">
+    <link href="Style.css" rel="stylesheet">
+    <style>
+        /* Additional CSS for positioning */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+
+        .buttons-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
 
@@ -35,21 +51,18 @@
             <h1>WARNER BROS</h1>
             <p>Explore the cinematic world like never before. Best movies, series, cartoons, and many more!</p>
             <div class="centered-content">
-            <a href="#movies" class="buttons-container">Explore Movies</a>
+                <a href="#movies" class="buttons-container">Explore Movies</a>
             </div>
         </div>
     </section>
-    <div class="section">
-    
 
-    <section id="movies" class="movies-section" padding: 20px;
-            background-color: #f0f0f0;
-            border-bottom: 3px solid #ccc;>
-        <h2>Featured Movies</h2>
-        <!-- Placeholder content -->
-    </section>
-    <p>Everything you would possible need to enjoy!!</p>
-</div>
+    <div class="section">
+        <section id="movies" class="movies-section">
+            <h2>Featured Movies</h2>
+            <!-- Placeholder content -->
+        </section>
+        <p>Everything you would possible need to enjoy!!</p>
+    </div>
 </main>
 
 <footer>
@@ -57,11 +70,11 @@
     <li><a href="https://cse23-080.github.io/cse23-080/feedback.html">Feedback..</a></li>
     <form>
         <div class="social-links">
-        <a href="https://www.instagram.com/theo_molefhe23/" target="_blank"> <img width="40" height="40" src="instagram" alt="instagram"></a>
-        <a href="https://www.facebook.com/theomolf.kingtr.5/" target="_blank"> <img width="40" height="40" src="facebook" alt="facebook"></a>
-        <a href="https://wa.me/your_+26777025359" target="_blank"> <img width="40" height="40" src="whatsapp" alt="whatapp"></a>
-        <a href="https://www.tiktok.com/@andilethero" target="_blank"> <img width="40" height="40" src="tiktok" alt="tiktok"></a>
-    </div>
+            <a href="https://www.instagram.com/theo_molefhe23/" target="_blank"> <img width="40" height="40" src="instagram" alt="instagram"></a>
+            <a href="https://www.facebook.com/theomolf.kingtr.5/" target="_blank"> <img width="40" height="40" src="facebook" alt="facebook"></a>
+            <a href="https://wa.me/your_+26777025359" target="_blank"> <img width="40" height="40" src="whatsapp" alt="whatapp"></a>
+            <a href="https://www.tiktok.com/@andilethero" target="_blank"> <img width="40" height="40" src="tiktok" alt="tiktok"></a>
+        </div>
     </form>
 </footer>
 
