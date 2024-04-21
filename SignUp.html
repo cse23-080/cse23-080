@@ -168,4 +168,15 @@
 
         var tabs = document.querySelectorAll('.tab');
         tabs.forEach(function(tab) {
-            if (tab.textContent === formId.replace('-
+            if (tab.textContent === formId.replace('-form', '')) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
+
