@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Warner Bros</title>
-     <link href = "Style.css" rel= "stylesheet">
+     <link href="Style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -22,8 +22,8 @@
         <a href="#contact"><img src="game" width="40" height="40" /> Apps & Games</a>
         <a href="#contact"><img src="collec.jpg" width="40" height="40" /> Collection</a>
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search">
-            <button class="search-btn">&#128269;</button>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search">
+            <button class="search-btn" onclick="searchContent()">&#128269;</button>
         </div>
     </div>
 </header>
@@ -42,13 +42,13 @@
     <div class="section">
     
 
-    <section id="movies" class="movies-section" padding: 20px;
+    <section id="movies" class="movies-section" style="padding: 20px;
             background-color: #f0f0f0;
-            border-bottom: 3px solid #ccc;>
+            border-bottom: 3px solid #ccc;">
         <h2>Featured Movies</h2>
         <!-- Placeholder content -->
     </section>
-    <p>Everything you would possible need to enjoy!!</p>
+    <p id="searchResult">Everything you would possibly need to enjoy!!</p>
 </div>
 </main>
 
@@ -64,6 +64,23 @@
     </div>
     </form>
 </footer>
+
+<script>
+function searchContent() {
+    var input, filter, section, p, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    section = document.getElementById("movies");
+    p = section.getElementsByTagName("p")[0];
+    txtValue = p.textContent || p.innerText;
+
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        document.getElementById("searchResult").innerText = txtValue;
+    } else {
+        document.getElementById("searchResult").innerText = "Search result not found";
+    }
+}
+</script>
 
 </body>
 </html>
