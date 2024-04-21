@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Our Site</title>
+    <title>Welcome to Warner Bros</title>
     <style>
         /* Reset default margin and padding */
         body, h1, p, ul, li {
@@ -11,92 +11,173 @@
             padding: 0;
         }
 
-        /* Set background color of the page to black */
+        /* Set background image */
         body {
-            background-color: black; /* Dark gray background color */
+            background-image: url('super1');
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Keep the background fixed while scrolling */
             color: white; /* Set text color to white */
             font-family: Arial, sans-serif; /* Use a common font for better readability */
+            padding: 0;
+            margin: 0;
+            cursor: default; /* Remove cursor */
         }
 
-        /* Additional CSS for navigation buttons */
-        .nav-buttons {
-            display: flex;
-            justify-content: flex-end; /* Align buttons to the far right */
-            padding: 10px 20px;
-            background-color: #333; /* Darker gray background color */
+        /* Container styling */
+        .container {
+            max-width: 800px; /* Increased width to accommodate the button */
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+            text-align: center;
         }
 
-        .nav-buttons a {
+        #logo {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            width: 100px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Tabs styling */
+        .tabs {
+            margin-bottom: 20px;
+            display: flex; /* Make tabs horizontal */
+            justify-content: center; /* Center align tabs */
+        }
+
+        .tab {
             display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #555;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+
+        .tab.active {
+            background-color: #007bff !important; /* Override active tab background color */
+            color: white; /* Set text color to white */
+        }
+
+        /* Form styling */
+        form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        form.active {
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Button styling */
+        .expand-button {
+            display: inline-block;
+            background-color: #333; /* Darker gray background color */
             color: white;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 20px; /* Make it an oval shape */
             transition: background-color 0.3s;
+            margin-top: 20px;
         }
 
-        .nav-buttons a:hover {
+        .expand-button:hover {
             background-color: skyblue; /* Dark gray on hover */
         }
 
-        /* Additional CSS for welcome section */
-        .welcome-section {
-            padding: 50px 20px;
-            background-color: #444; /* Gray background color */
-        }
-
-        /* Additional CSS for footer */
-        footer {
-            padding: 20px;
-            background-color: black; /* Black background color */
-            color: white; /* Set text color to white */
-            text-align: center;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-
-        /* Additional CSS for tables */
+        /* Table styling */
         table {
-            width: 100%; /* Fixed width */
+            width: 100%;
             border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
             margin-top: 40px;
-            table-layout: fixed;
         }
 
         th, td {
             padding: 10px;
             border: 1px solid #555;
             text-align: left;
-            word-wrap: break-word; /* Wrap long content */
-        }
-
-        /* Additional CSS for video iframes */
-        iframe {
-            width: 100%; /* Set width to 100% */
-            height: 100%; /* Set height to 100% */
         }
     </style>
 </head>
 <body>
-<div class="logo">
-    <img src="warner bros" alt="Warner Bros Logo"> <h1>Welcome to Warner Bros</h1>
-</div>
-<div class="nav-buttons">
-    <a href="https://cse23-080.github.io/cse23-080/SignUp.html">Sign Up/Sign In</a>
-</div>
 
-<section class="welcome-section">
-    <h2>Best movie website!!</h2>
-    <p>Explore our amazing features and services. Bring you the best movie experience ever!!</p>
+<div class="container">
+    <img src="warner bros" alt="Logo" id="logo">
+    <!-- Tabs for Sign In and Sign Up -->
+    <h1>Register Form</h1>
+    <div class="tabs">
+        <div class="tab active" onclick="showForm('signin-form')">Sign In</div>
+        <div class="tab" onclick="showForm('signup-form')">Sign Up</div>
+    </div>
 
+    <!-- Sign In form -->
+    <form action="https://cse23-080.github.io/cse23-080/Warner%20welcome%20page.html" id="signin-form" class="active">
+        <input type="text" name="username" placeholder="Username or Email" required><br><br>
+        <input type="password" name="password" placeholder="Password" required><br><br>
+        <input type="submit" value="Sign In">
+    </form>
+
+    <!-- Sign Up form -->
+    <form action="https://cse23-080.github.io/cse23-080/Warner%20welcome%20page.html" id="signup-form">
+        <input type="text" name="fullname" placeholder="Full Name" required><br><br>
+        <input type="text" name="contact" placeholder="Contact Number" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <textarea name="address" placeholder="Physical Address" required></textarea><br><br> 
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <!-- Button below tables -->
+    <a href="https://cse23-080.github.io/cse23-080/Warner%20welcome%20page.html" class="expand-button">Explore More</a>
+
+    <!-- Login words outside the container -->
+    <div class="login-words">
+        Already have an account? <a href="https://cse23-080.github.io/cse23-080/Warner%20welcome%20page.html">Sign In</a>
+    </div>
+
+    <!-- Tables -->
     <table>
         <tr>
-            <td style="width: 50%;">
-                <iframe src="https://www.youtube.com/embed/AFPLRIdn1pk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <td>
+                <iframe width="700" height="500" src="https://www.youtube.com/embed/AFPLRIdn1pk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </td>
-            <td style="width: 50%;">
+            <td>
                 <h3>Spider-man Miles Morales</h3>
                 <p>Sony Pictures Animation has teamed up with the Kevin Love Fund to digitally release the animated short film, The Spider Within: A Spider-Verse Story, that will be incorporated into the Kevin Love Fund’s new mental health focused lesson plan, “The Hero Within.” The lesson plan invites students to tell their own story through the lens of mental health awareness via an interactive curriculum including a creative storyboard activity. Visit kevinlovefund.org for additional information. </p>
             </td>
@@ -105,10 +186,10 @@
 
     <table>
         <tr>
-            <td style="width: 50%;">
-                <iframe src="https://www.youtube.com/embed/Go8nTmfrQd8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <td>
+                <iframe width="700" height="500" src="https://www.youtube.com/embed/Go8nTmfrQd8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </td>
-            <td style="width: 50%;">
+            <td>
                 <h3>Thur Love & Thunder</h3>
                 <p>The film finds Thor (Chris Hemsworth) on a journey unlike anything he’s ever faced – a quest for inner peace. But his retirement is interrupted by a galactic killer known as Gorr the God Butcher (Christian Bale), who seeks the extinction of the gods. To combat the threat, Thor enlists the help of King Valkyrie (Tessa Thompson), Korg (Taika Waititi) and ex-girlfriend Jane Foster (Natalie Portman), who – to Thor’s surprise – inexplicably wields his magical hammer, Mjolnir, as the Mighty Thor. Together, they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late. Directed by Waititi (“Thor: Ragnarok,” “Jojo Rabbit”) and produced by Kevin Feige and Brad Winderbaum, “Thor: Love and Thunder” opens in theaters July 8, 2022.</p>
             </td>
@@ -117,10 +198,10 @@
 
     <table>
         <tr>
-            <td style="width: 50%;">
-                <iframe src="https://www.youtube.com/embed/F020aNi0wS0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <td>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/F020aNi0wS0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </td>
-            <td style="width: 50%;">
+            <td>
                 <h3>The First Avenger</h3>
                 <p>Steve Rogers / Captain America Transformation Scene - Captain America: The First Avenger (2011) Movie CLIP HD [1080p]
 
@@ -129,14 +210,30 @@ TM & © Disney (2011)
             </td>
         </tr>
     </table>
-</section>
+</div>
 
-<footer>
-    <h2>About Us</h2>
-    <p>Learn more about our company and mission.</p>
-    <p>&copy; 2024 Our Site. All rights reserved.</p>
-</footer>
+<script>
+    function showForm(formId) {
+        var forms = document.querySelectorAll('form');
+        forms.forEach(function(form) {
+            if (form.id === formId) {
+                form.classList.add('active');
+            } else {
+                form.classList.remove('active');
+            }
+        });
+
+        var tabs = document.querySelectorAll('.tab');
+        tabs.forEach(function(tab) {
+            if (tab.textContent === formId.replace('-form', '')) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
-
 
