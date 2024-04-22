@@ -116,4 +116,22 @@
         .signin-signup-btn:hover {
             background-color:  white;
         }
-    
+      /* Style.css */
+
+     /* Add this style for the Explore button */
+       .explore-btn {
+         display: inline-block;
+         padding: 10px 20px;
+         border-radius: 50px; /* Make it oval */
+         border: 2px solid skyblue; /* Sky blue border */
+         background-color: transparent; /* Clear inside */
+         color: #000; /* Text color */
+         text-decoration: none;
+         font-size: 16px;
+        }
+ 
+        .explore-btn:hover {
+         background-color: skyblue; /* Change background on hover */
+         color: #fff; /* Change text color on hover */
+       }
+
