@@ -101,22 +101,7 @@
             background-color: dark gey;
             border-radius: 20px; /* Make it an oval shape */
         }
-     body {
-           
-        }
-
-        .block {
-            background-color:white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .signin-signup-btn:hover {
-            background-color:  white;
-        }
-      /* Style.css */
+     body { 
 
      /* Add this style for the Explore button */
        .explore-btn {
@@ -134,4 +119,19 @@
          background-color: skyblue; /* Change background on hover */
          color: #fff; /* Change text color on hover */
        }
+           
+        }
+
+        .block {
+            background-color:white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .signin-signup-btn:hover {
+            background-color:  white;
+        }
+     
 
