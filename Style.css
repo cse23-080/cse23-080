@@ -1,137 +1,171 @@
- /* Reset default margin and padding */
-        body, h1, p, ul, li {
-            margin: 0;
-            padding: 0;
-        }
+/* Reset default margin and padding */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
 
-        /* Set background color of the page to black */
-        body {
-            background-color: black;
-            color: white; /* Set text color to white */
-            font-family: Arial, sans-serif; /* Use a common font for better readability */
-         
-        }
+/* Set background color of the page to black */
+body {
+    background-color: black;
+    color: white; /* Set text color to white */
+    font-family: Arial, sans-serif; /* Use a common font for better readability */
+}
 
-        /* Additional CSS for navigation buttons */
-       .buttons-container {
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 1; /* Ensure the header is above the main content */
-        }
+/* Additional CSS for navigation buttons */
+.buttons-container {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Ensure the header is above the main content */
+}
 
-        .buttons-container a {
-            display: flex;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: black;
-            transition: background-color 0.3s;
-            margin-right: 20px;
-            border-radius: 15px; /* Make it an oval shape */
-        }
+.buttons-container a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: black;
+    transition: background-color 0.3s;
+    margin-right: 20px;
+    border-radius: 15px; /* Make it an oval shape */
+}
 
-        .buttons-container a img {
-            margin-right: 10px; /* Adjust the space between image and text */
-        }
+.buttons-container a img {
+    margin-right: 10px; /* Adjust the space between image and text */
+}
 
-        .buttons-container a:last-child {
-            margin-right: 0;
-        }
+.buttons-container a:last-child {
+    margin-right: 0;
+}
 
-        .buttons-container a:hover {
-            background-color: rgba(135, 206, 235, 0.8);
-        }
+.buttons-container a:hover {
+    background-color: rgba(135, 206, 235, 0.8);
+}
 
-        /* Additional CSS for Search button */
-        .search-container {
-            display: flex;
-            align-items: center;
-            margin-right: 20px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 10px;
-            transition: width 0.4s ease-in-out;
-        }
+/* Additional CSS for Search button */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    transition: width 0.4s ease-in-out;
+}
 
-        .search-input {
-            background-color:dark grey;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 50px; /* Initial width */
-            transition: width 0.4s ease-in-out;
-            text-align: center;
-            border-radius: 20px; /* Make it an oval shape */
-            font-family: Arial, sans-serif;
-        }
+.search-input {
+    background-color: dark grey;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 50px; /* Initial width */
+    transition: width 0.4s ease-in-out;
+    text-align: center;
+    border-radius: 20px; /* Make it an oval shape */
+    font-family: Arial, sans-serif;
+}
 
-        .search-input:focus {
-            width: 300px; /* Expanded width */
-            outline: none; /* Remove the default focus outline */
-            text-align: left; /* Align text to the left when input is expanded */
-            padding-left: 15px; /* Add left padding when input is expanded */
-            background-image: none; /* Remove background image when input is focused */
-        }
+.search-input:focus {
+    width: 300px; /* Expanded width */
+    outline: none; /* Remove the default focus outline */
+    text-align: left; /* Align text to the left when input is expanded */
+    padding-left: 15px; /* Add left padding when input is expanded */
+    background-image: none; /* Remove background image when input is focused */
+}
 
-        .search-btn {
-            background-color: dark grey;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 20px; /* Make it an oval shape */
-            cursor: pointer;
-        }
+.search-btn {
+    background-color: dark grey;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px; /* Make it an oval shape */
+    cursor: pointer;
+}
 
-        .search-btn:hover {
-            background-color: white;
-        }
+.search-btn:hover {
+    background-color: white;
+}
 
-        /* Additional CSS for Sign In and Sign Up buttons */
-        .signin-signup-btn {
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            background-color: dark gey;
-            border-radius: 20px; /* Make it an oval shape */
-        }
-     body { 
+/* Additional CSS for Sign In and Sign Up buttons */
+.signin-signup-btn {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    background-color: dark grey;
+    border-radius: 20px; /* Make it an oval shape */
+}
 
-     /* Add this style for the Explore button */
-       .explore-btn {
-         display: inline-block;
-         padding: 10px 20px;
-         border-radius: 50px; /* Make it oval */
-         border: 2px solid skyblue; /* Sky blue border */
-         background-color: transparent; /* Clear inside */
-         color: #000; /* Text color */
-         text-decoration: none;
-         font-size: 16px;
-        }
- 
-        .explore-btn:hover {
-         background-color: skyblue; /* Change background on hover */
-         color: #fff; /* Change text color on hover */
-       }
-           
-        }
+.signin-signup-btn:hover {
+    background-color: white;
+}
 
-        .block {
-            background-color:white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+/* Add this style for the Explore button */
+.explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px; /* Make it oval */
+    border: 2px solid skyblue; /* Sky blue border */
+    background-color: transparent; /* Clear inside */
+    color: #000; /* Text color */
+    text-decoration: none;
+    font-size: 16px;
+}
 
-        .signin-signup-btn:hover {
-            background-color:  white;
-        }
-     
+.explore-btn:hover {
+    background-color: skyblue; /* Change background on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.block {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Set image container position to relative */
+section {
+    position: relative;
+    overflow: hidden;
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+}
+
+/* Style for the image */
+img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Style for the text */
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect for the image */
+section:hover img {
+    transform: scale(1.1); /* Increase scale factor as needed */
+}
+
+/* Hover effect for the text */
+section:hover h2 {
+    opacity: 1;
+}
+
 
