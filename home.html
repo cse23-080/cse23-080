@@ -4,66 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Warner Bros</title>
-    <link href="Style.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Style.css" rel="stylesheet"> <!-- Your custom CSS -->
 </head>
 <body>
 
-<header>
-    <!-- Logo -->
-    <div class="logo">
-        <img src="warner bros" alt="Warner Bros Logo">
-    </div>
-
-    <!-- Navigation -->
-    <div class="buttons-container">
-        <a href="https://cse23-080.github.io/cse23-080/home.html"><img src="home1" width="40" height="40" /> Home</a>
-        <a href="https://cse23-080.github.io/cse23-080/Movie.html"><img src="movies" width="40" height="40" /> Movies</a>
-        <a href="#about"><img src="tv" width="40" height="40" /> Tv Shows</a>
-        <a href="#contact"><img src="game" width="40" height="40" /> Apps & Games</a>
-        <a href="#contact"><img src="collec.jpg" width="40" height="40" /> Collection</a>
+<header class="container">
+    <div class="row">
+        <div class="col-md-6 logo">
+            <!-- Logo -->
+            <img src="warner_bros_logo.png" alt="Warner Bros Logo" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <!-- Navigation (using Bootstrap's navbar) -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Warner Bros</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://cse23-080.github.io/cse23-080/home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://cse23-080.github.io/cse23-080/Movie.html">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">Tv Shows</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Apps & Games</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Collection</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
 </header>
 
 <main>
     <!-- Placeholder content -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>WARNER BROS</h1>
-            <p>Explore the cinematic world like never before. Best movies, series, cartoons, and many more!</p>
-            <div class="section">
-                <section>
-                   <a href="https://watchseries.pe/movie/watch-spiderman-into-the-spiderverse-full-online-19847">
-                   <img src="miles" alt="Example Image">
-                   </a>
-                </section>
-            </div>
-            <div class="centered-content">
-                <a href="#movies" class="buttons-container">Explore Movies</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>WARNER BROS</h1>
+                    <p>Explore the cinematic world like never before. Best movies, series, cartoons, and many more!</p>
+                    <a href="#movies" class="btn btn-primary">Explore Movies</a>
+                </div>
+                <div class="col-md-6">
+                    <!-- Carousel (using Bootstrap's carousel) -->
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image1.jpg" class="d-block w-100" alt="Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image2.jpg" class="d-block w-100" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image3.jpg" class="d-block w-100" alt="Image 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <div class="section">
-        <section id="movies" class="movies-section" style="padding: 20px; background-color: #f0f0f0; border-bottom: 3px solid #ccc;">
+
+    <section id="movies" class="movies-section" style="padding: 20px; background-color: #f0f0f0; border-bottom: 3px solid #ccc;">
+        <div class="container">
             <h2>Featured Movies</h2>
             <!-- Placeholder content -->
-        </section>
-        <p>Everything you would possibly need to enjoy!!</p>
-    </div>
+        </div>
+    </section>
 </main>
 
-<footer>
-    <h2>About Us...</h2>
-    <p>&copy; 2024 Warner Bros. All rights reserved.</p>
-    <ul>
-        <li><a href="https://cse23-080.github.io/cse23-080/feedback.html">Feedback..</a></li>
-    </ul>
-    <div class="social-links">
-        <a href="https://www.instagram.com/theo_molefhe23/" target="_blank"> <img width="40" height="40" src="instagram" alt="instagram"></a>
-        <a href="https://www.facebook.com/theomolf.kingtr.5/" target="_blank"> <img width="40" height="40" src="facebook" alt="facebook"></a>
-        <a href="https://wa.me/your_+26777025359" target="_blank"> <img width="40" height="40" src="whatsapp" alt="whatapp"></a>
-        <a href="https://www.tiktok.com/@andilethero" target="_blank"> <img width="40" height="40" src="tiktok" alt="tiktok"></a>
+<footer class="container">
+    <div class="row">
+        <div class="col">
+            <h2>About Us</h2>
+            <p>&copy; 2024 Warner Bros. All rights reserved.</p>
+        </div>
+        <div class="col">
+            <h2>Connect with Us</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/theo_molefhe23/" target="_blank"> <img width="40" height="40" src="instagram" alt="instagram"></a>
+                <a href="https://www.facebook.com/theomolf.kingtr.5/" target="_blank"> <img width="40" height="40" src="facebook" alt="facebook"></a>
+                <a href="https://wa.me/your_+26777025359" target="_blank"> <img width="40" height="40" src="whatsapp" alt="whatapp"></a>
+                <a href="https://www.tiktok.com/@andilethero" target="_blank"> <img width="40" height="40" src="tiktok" alt="tiktok"></a>
+            </div>
+        </div>
+        <div class="col">
+            <h2>Feedback</h2>
+            <ul>
+                <li><a href="https://cse23-080.github.io/cse23-080/feedback.html">Send us your feedback</a></li>
+            </ul>
+        </div>
     </div>
 </footer>
 
+<!-- Bootstrap JS (Optional if you need JavaScript features) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
