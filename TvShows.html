@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Warner Bros</title>
+    <link href="Style.css" rel="stylesheet">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CSS for image pop-up effect and full-screen fit */
+       
+        /* CSS for footer background */
+        footer {
+            background-color: grey; /* Gray background */
+            padding: 20px; /* Add some padding for spacing */
+        }
+
+        /* Style for video background */
+        .video-container {
+            display: none; /* Hide video container */
+        }
+
+        /* Style for header background image */
+        header {
+            background-image: url('back2'); /* Replace 'your_image.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Set header height to full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white; /* Text color for better visibility */
+        }
+
+        /* Increase image size in the carousel */
+        .carousel-item img {
+            max-height: 400px; /* Adjust the maximum height as needed */
+            max-width: 80%; /* Adjust the maximum width */
+            margin: 0 auto; /* Center the images */
+        }
+
+        /* Center the "Explore" button */
+        .button-container {
+            text-align: center;
+            margin-top: 20px; /* Add some margin for spacing */
+        }
+
+        /* Additional styles as needed */
+
+        /* Media query for small screens */
+        @media (max-width: 576px) {
+            .carousel-item img {
+                max-height: 250px; /* Adjust the maximum height for small screens */
+            }
+        }
+
+        /* Style for TV show cards */
+        .tv-show-card {
+            margin-bottom: 20px;
+        }
+
+        .tv-show-card img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    
+<header>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="warner bros" alt="Warner Bros Logo">
+    </div>
+
+    <!-- Navigation -->
+    <div class="buttons-container">
+        <a href="https://cse23-080.github.io/cse23-080/home.html"><img src="home1" width="40" height="40" /> Home</a>
+        <a href="https://cse23-080.github.io/cse23-080/Movie.html"><img src="movies" width="40" height="40" /> Movies</a>
+        <a href="#tvshows"><img src="tv" width="40" height="40" /> Tv Shows</a>
+        <a href="#contact"><img src="game" width="40" height="40" /> Apps & Games</a>
+        <a href="#contact"><img src="collec.jpg" width="40" height="40" /> Collection</a>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Placeholder content -->
+    <h1 id="tvshows">Our TV Shows</h1>
+
+    <!-- TV Show Cards -->
+    <div class="row">
+        <!-- TV Show 1 -->
+        <div class="col-md-4">
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank">
+                    <img src="tv_show_1_image.jpg" alt="TV Show 1">
+                </a>
+            </div>
+        </div>
+
+        <!-- TV Show 2 -->
+        <div class="col-md-4">
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank">
+                    <img src="tv_show_2_image.jpg" alt="TV Show 2">
+                </a>
+            </div>
+        </div>
+
+        <!-- Add more TV Show cards as needed -->
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Warner Bros. All rights reserved.</p>
+    <ul>
+        <li><a href="https://cse23-080.github.io/cse23-080/feedback.html">Feedback..</a></li>
+    </ul>
+    <div class="social-links">
+        <a href="https://www.instagram.com/theo_molefhe23/" target="_blank"> <img width="40" height="40" src="instagram" alt="instagram"></a>
+        <a href="https://www.facebook.com/theomolf.kingtr.5/" target="_blank"> <img width="40" height="40" src="facebook" alt="facebook"></a>
+        <a href="https://wa.me/your_+26777025359" target="_blank"> <img width="40" height="40" src="whatsapp" alt="whatapp"></a>
+        <a href="https://www.tiktok.com/@andilethero" target="_blank"> <img width="40" height="40" src="tiktok" alt="tiktok"></a>
+    </div>
+</footer>
+
+<!-- Include Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
