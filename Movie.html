@@ -9,6 +9,8 @@
         /* Add CSS for image pop-up effect and full-screen fit */
         table {
             width: 100%;
+            border-collapse: collapse; /* Collapse table borders into a single border */
+            border: 2px solid black; /* Add a border around each table */
         }
 
         table img {
@@ -26,17 +28,36 @@
             background-color: darkgrey; /* Gray background */
             padding: 20px; /* Add some padding for spacing */
         }
-         /* Style for header background image */
-        header {
-            background-image: url('back2'); /* Replace 'your_image.jpg' with your image path */
+
+        /* Set background image for whole page */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            background-image: url('back2'); /* Replace 'back2' with your image path */
             background-size: cover;
             background-position: center;
-            height: 100vh; /* Set header height to full viewport height */
+            font-family: Arial, sans-serif; /* Define a fallback font family */
+        }
+
+        /* Style for header */
+        header {
+            height: 10vh; /* Set header height */
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white; /* Text color for better visibility */
+        }
+
+        /* Style for navigation buttons */
+        .buttons-container a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
