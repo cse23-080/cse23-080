@@ -77,6 +77,12 @@
             width: 100%; /* Set width to 100% */
             height: 100%; /* Set height to 100% */
         }
+
+        /* Additional CSS for images */
+        .movie-img {
+            width: 100px; /* Set the width of movie images */
+            height: auto; /* Maintain aspect ratio */
+        }
     </style>
 </head>
 <body>
@@ -95,22 +101,39 @@
 
 <section class="welcome-section">
     <h2>Our Best Collection Ever!</h2>
+    <h3>Sci-Fi Movies</h3>
     <table>
         <tr>
             <th>Movie</th>
             <th>Genre</th>
         </tr>
         <tr>
+            <td><img class="movie-img" src="matrix.jpg" alt="The Matrix"></td>
             <td>The Matrix</td>
             <td>Sci-Fi</td>
         </tr>
         <tr>
+            <td><img class="movie-img" src="inception.jpg" alt="Inception"></td>
+            <td>Inception</td>
+            <td>Sci-Fi</td>
+        </tr>
+    </table>
+
+    <h3>Drama Movies</h3>
+    <table>
+        <tr>
+            <th>Movie</th>
+            <th>Genre</th>
+        </tr>
+        <tr>
+            <td><img class="movie-img" src="forrest-gump.jpg" alt="Forrest Gump"></td>
             <td>Forrest Gump</td>
             <td>Drama</td>
         </tr>
         <tr>
-            <td>Inception</td>
-            <td>Thriller</td>
+            <td><img class="movie-img" src="shawshank-redemption.jpg" alt="The Shawshank Redemption"></td>
+            <td>The Shawshank Redemption</td>
+            <td>Drama</td>
         </tr>
     </table>
 </section>
