@@ -72,16 +72,39 @@
             word-wrap: break-word; /* Wrap long content */
         }
 
-        /* Additional CSS for video iframes */
-        iframe {
-            width: 100%; /* Set width to 100% */
-            height: 100%; /* Set height to 100% */
-        }
-
         /* Additional CSS for images */
-        .movie-img {
+        .movie-img-container {
+            position: relative;
             width: 100px; /* Set the width of movie images */
             height: auto; /* Maintain aspect ratio */
+            overflow: hidden;
+        }
+
+        .movie-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .movie-details {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .movie-details h4 {
+            margin-bottom: 5px;
+        }
+
+        .movie-details p {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -108,14 +131,26 @@
             <th>Genre</th>
         </tr>
         <tr>
-            <td><img class="movie-img" src="matrix.jpg" alt="The Matrix"></td>
-            <td>The Matrix</td>
-            <td>Sci-Fi</td>
+            <td>
+                <div class="movie-img-container">
+                    <img class="movie-img" src="matrix.jpg" alt="The Matrix">
+                    <div class="movie-details">
+                        <h4>The Matrix</h4>
+                        <p>Sci-Fi</p>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td><img class="movie-img" src="inception.jpg" alt="Inception"></td>
-            <td>Inception</td>
-            <td>Sci-Fi</td>
+            <td>
+                <div class="movie-img-container">
+                    <img class="movie-img" src="inception.jpg" alt="Inception">
+                    <div class="movie-details">
+                        <h4>Inception</h4>
+                        <p>Sci-Fi</p>
+                    </div>
+                </div>
+            </td>
         </tr>
     </table>
 
@@ -126,14 +161,26 @@
             <th>Genre</th>
         </tr>
         <tr>
-            <td><img class="movie-img" src="forrest-gump.jpg" alt="Forrest Gump"></td>
-            <td>Forrest Gump</td>
-            <td>Drama</td>
+            <td>
+                <div class="movie-img-container">
+                    <img class="movie-img" src="forrest-gump.jpg" alt="Forrest Gump">
+                    <div class="movie-details">
+                        <h4>Forrest Gump</h4>
+                        <p>Drama</p>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td><img class="movie-img" src="shawshank-redemption.jpg" alt="The Shawshank Redemption"></td>
-            <td>The Shawshank Redemption</td>
-            <td>Drama</td>
+            <td>
+                <div class="movie-img-container">
+                    <img class="movie-img" src="shawshank-redemption.jpg" alt="The Shawshank Redemption">
+                    <div class="movie-details">
+                        <h4>The Shawshank Redemption</h4>
+                        <p>Drama</p>
+                    </div>
+                </div>
+            </td>
         </tr>
     </table>
 </section>
