@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,12 +20,10 @@
 
         /* Additional CSS for navigation buttons */
         .nav-buttons {
-            position: relative;
-            z-index: 2; /* Ensure navigation buttons are on top of the background */
             display: flex;
             justify-content: flex-end; /* Align buttons to the far right */
             padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Darken the background slightly */
+            background-color: #333; /* Darker gray background color */
         }
 
         .nav-buttons a {
@@ -42,36 +40,15 @@
         }
 
         /* Additional CSS for welcome section */
-        header {
-            position: relative;
-            height: 500px; /* Set the height of the header */
-            background-image: url('back2'); /* Replace 'your-background-image.jpg' with your image URL */
-            background-size: cover; /* Cover the entire header */
-            background-position: center; /* Center the background image */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white; /* Text color */
-            font-size: 24px; /* Adjust font size as needed */
-        }
-
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 3; /* Ensure logo is on top of the background */
-        }
-
-        /* Additional CSS for welcome section */
         .welcome-section {
             padding: 50px 20px;
+            background-color: #444; /* Gray background color */
         }
 
         /* Additional CSS for footer */
         footer {
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Darken the background slightly */
+            background-color: black; /* Black background color */
             color: white; /* Set text color to white */
             text-align: center;
         }
@@ -100,19 +77,36 @@
             width: 100%; /* Set width to 100% */
             height: 100%; /* Set height to 100% */
         }
+        
+/* Additional CSS for welcome section */
+        header {
+            position: relative;
+            height: 500px; /* Set the height of the header */
+            background-image: url('back2'); /* Replace 'your-background-image.jpg' with your image URL */
+            background-size: cover; /* Cover the entire header */
+            background-position: center; /* Center the background image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white; /* Text color */
+            font-size: 24px; /* Adjust font size as needed */
+            
+            
+            .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 3; /* Ensure logo is on top of the background */
     </style>
 </head>
 <body>
+<div class="logo">
+    <img src="warner bros" alt="Warner Bros Logo"> <h1>Welcome to Warner Bros</h1>
+</div>
 <div class="nav-buttons">
     <a href="https://cse23-080.github.io/cse23-080/SignUp.html">Sign Up/Sign In</a>
 </div>
-
-<header>
-    <div class="logo">
-        <img src="warner_bros_logo.jpg" alt="Warner Bros Logo"> <!-- Replace 'warner_bros_logo.jpg' with your logo image URL -->
-    </div>
-    <h1>Welcome to Our Site</h1>
-</header>
 
 <section class="welcome-section">
     <h2>Best movie website!!</h2>
@@ -165,4 +159,4 @@ TM & © Disney (2011)
     <p>&copy; 2024 Our Site. All rights reserved.</p>
 </footer>
 </body>
-</html>
+</html
