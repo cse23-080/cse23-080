@@ -61,32 +61,22 @@
         .image-below-explore {
             text-align: center; /* Center the image */
             margin-top: 20px; /* Add margin for spacing */
-            position: relative;
         }
 
         .image-below-explore img {
-            width: 60%; /* Set the width of the image */
-            opacity: 1; /* Set initial opacity */
-            position: absolute;
-            transition: width 0.5s ease-out; /* Add transition effect */
+            width: 50%; /* Set the width of the image */
+            opacity: 0.7; /* Set initial opacity */
+            transition: opacity 0.3s ease; /* Add transition effect */
         }
 
         .image-below-explore img:hover {
-            width: 0%; /* Change width on hover */
-            opacity: 0; /* Change opacity on hover */
+            opacity: 1; /* Change opacity on hover */
         }
 
-        .image-below-explore p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40%; /* Set width of text */
-            font-style: italic;
-            color: white;
-            font-size: 14px;
-            text-align: left;
-            padding: 10px;
+        .image-text {
+            color: white; /* Set text color to white */
+            font-size: 16px; /* Adjust font size */
+            margin-top: 10px; /* Add margin for spacing */
         }
     </style>
 </head>
@@ -162,7 +152,7 @@
     <!-- Image below the Explore button -->
     <div class="image-below-explore">
         <img src="echo" alt="Image below Explore button">
-        <p><i>Young Maya Lopez leaves her hometown of Tamaha, Oklahoma following her mother's death and moves to New York City, where Wilson Fisk raises her to be a ruthless assassin.</i></p>
+        <p class="image-text"><i>Young Maya Lopez leaves her hometown of Tamaha, Oklahoma following her mother's death and moves to New York City, where Wilson Fisk raises her to be a ruthless assassin.</i></p>
     </div>
 </main>
 
@@ -186,3 +176,4 @@
 
 </body>
 </html>
+
