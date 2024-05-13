@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +12,9 @@
        
         /* CSS for footer background */
         footer {
-            background-color: grey; /* Gray background */
+            background-color: black; /* Black background */
+            color: white; /* Text color */
             padding: 20px; /* Add some padding for spacing */
-        }
-
-        /* Style for video background */
-        .video-container {
-            display: none; /* Hide video container */
         }
 
         /* Style for header background image */
@@ -35,7 +30,50 @@
             color: white; /* Text color for better visibility */
         }
 
+        /* Increase image size in the carousel */
+        .carousel-item img {
+            max-height: 400px; /* Adjust the maximum height as needed */
+            max-width: 80%; /* Adjust the maximum width */
+            margin: 0 auto; /* Center the images */
+        }
+
+        /* Center the "Explore" button */
+        .button-container {
+            text-align: center;
+            margin-top: 20px; /* Add some margin for spacing */
+        }
+
         /* Additional styles as needed */
+
+        /* Media query for small screens */
+        @media (max-width: 576px) {
+            .carousel-item img {
+                max-height: 250px; /* Adjust the maximum height for small screens */
+            }
+        }
+
+        /* Style for TV show cards */
+        .tv-show-card {
+            margin-bottom: 20px;
+            text-align: center; /* Center text */
+        }
+
+        .tv-show-card img {
+            width: 100%; /* Make the image take the full width of its container */
+            height: auto;
+            display: block; /* Change to block display */
+            margin-bottom: 10px; /* Add space below image */
+        }
+
+        .tv-show-card p {
+            color: white; /* Text color */
+        }
+
+        /* Black background for body */
+        body {
+            background-color: black;
+            color: white; /* Text color */
+        }
     </style>
 </head>
 <body>
@@ -50,7 +88,7 @@
     <div class="buttons-container">
         <a href="https://cse23-080.github.io/cse23-080/home.html"><img src="home1" width="40" height="40" /> Home</a>
         <a href="https://cse23-080.github.io/cse23-080/Movie.html"><img src="movies" width="40" height="40" /> Movies</a>
-        <a href="#about"><img src="tv" width="40" height="40" /> Tv Shows</a>
+        <a href="https://cse23-080.github.io/cse23-080/TvShows.html"><img src="tv" width="40" height="40" /> Tv Shows</a>
         <a href="#contact"><img src="game" width="40" height="40" /> Apps & Games</a>
         <a href="#contact"><img src="collec.jpg" width="40" height="40" /> Collection</a>
     </div>
@@ -58,61 +96,148 @@
 
 <main class="container">
     <!-- Placeholder content -->
-    <h1>Our Movies And More....</h1>
-    <!-- Bootstrap Carousel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <!-- Add more indicators if you have more pictures -->
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="lastair" alt="First slide">
+    <h1 id="tvshows">WHATS HOT.....</h1>
+
+    <!-- TV Show Cards -->
+    <div class="row">
+        <!-- TV Show 1 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=QJHY4ggYCk4&t=10s" target="_blank">
+                    <img src="motal" alt="TV Show 1">
+                </a>
+                <p> MOTAL || 133min Theater</p>
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="motal" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="doc" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="echo" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="drift" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="cabrini" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="wordle" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="miles" alt="Third slide">
-            </div>
-            
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+
+        <!-- TV Show 2 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://watchseries.pe/watch-movie/watch-cabrini-full-online-107005.10357180" target="_blank">
+                    <img src="cabrini" alt="TV Show 2">
+                </a>
+                <p> Cabrini || 127min Theater</p>
+            </div>
+        </div>
+
+        <!-- TV Show 3 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=MjQG-a7d41Q" target="_blank">
+                    <img src="mufasa" alt="TV Show 3">
+                </a>
+                <p> Mufasa || 123min Theater</p>
+            </div>
+        </div>
+
+        <!-- TV Show 4 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=3_LbFzJiETc&t=1s" target="_blank">
+                    <img src="gladiator" alt="TV Show 4">
+                </a>
+                <p>Gladiator|| 123min Theater</p>
+            </div>
+        </div>
     </div>
-    <div class="button-container">
-         <a href="https://cse23-080.github.io/cse23-080/Movie.html"><img src="explore" width="40" height="40" /> Explore</a>
+     <h1 id="tvshows">Top Trending Movies</h1>
+
+    <!-- TV Show Cards -->
+    <div class="row">
+        <!-- TV Show 1 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=V-mugKDQDlg&t=1s" target="_blank">
+                    <img src="fallout" alt="TV Show 1">
+                </a>
+                <p>Fallout || 133min Theater</p>
+            </div>
+        </div>
+
+        <!-- TV Show 2 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=uXLbQrK6cXw" target="_blank">
+                    <img src="ocean" alt="TV Show 2">
+                </a>
+                <p>Ocean || 127min Theater</p>
+            </div>
+        </div>
+
+        <!-- TV Show 3 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=ByAn8DF8Ykk" target="_blank">
+                    <img src="lastair" alt="TV Show 3">
+                </a>
+                <p>Last Air Bender|| 123min Theater</p>
+            </div>
+        </div>
+
+        <!-- TV Show 4 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=P9G-PA1oMPI" target="_blank">
+                    <img src="onelife" alt="TV Show 4">
+                </a>
+                <p>One Life || 123min Theater</p>
+            </div>
+        </div>
+    </div>
+
+     <h1 id="tvshows"> Most viewed .....</h1>
+
+    <!-- TV Show Cards -->
+    <div class="row">
+        <!-- TV Show 1 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://watchseries.pe/watch-movie/watch-kung-fu-panda-3-full-online-18639.5299324" target="_blank">
+                    <img src="panda" alt="TV Show 1">
+                </a>
+                <p> Kun Fu Panda || 133min Theater</p>
+            </div>
+        </div>
+
+        <!-- TV Show 2 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=yAN5uspO_hk" target="_blank">
+                    <img src="shogun" alt="TV Show 2">
+                </a>
+                <p> Shogun || 127min Theater</p>
+            </div>
+        </div>
+
+        <!-- TV Show 3 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://watchseries.pe/watch-movie/watch-gravity-full-online-19608.5297563" target="_blank">
+                    <img src="gravity" alt="TV Show 3">
+                </a>
+                <p>Gravity || 123min Theater</p>
+            </div>
+        </div>
+
+        <!-- TV Show 4 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=8XoNfrgrAGM" target="_blank">
+                    <img src="imaginary" alt="TV Show 4">
+                </a>
+                <p>Imaginary || 123min Theater</p>
+            </div>
+        </div>
     </div>
 </main>
 
 <footer>
     <p>&copy; 2024 Warner Bros. All rights reserved.</p>
-    <ul>
-        <li><a href="https://cse23-080.github.io/cse23-080/feedback.html">Feedback..</a></li>
-    </ul>
+    <p>Learn more about our company and mission.</p>
+    <p><i>Welcome to Warner Bros, where cinematic magic meets timeless storytelling. From iconic classics to groundbreaking blockbusters, our films inspire and entertain. With innovation and passion, we shape the future of entertainment, one unforgettable story at a time.</i></p>
+    <div class="buttons-container">
+        <a href="https://cse23-080.github.io/cse23-080/feedback.html">Feedback</a>
+    </div>
     <div class="social-links">
         <a href="https://www.instagram.com/theo_molefhe23/" target="_blank"> <img width="40" height="40" src="instagram" alt="instagram"></a>
         <a href="https://www.facebook.com/theomolf.kingtr.5/" target="_blank"> <img width="40" height="40" src="facebook" alt="facebook"></a>
