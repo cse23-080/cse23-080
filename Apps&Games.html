@@ -7,12 +7,39 @@
     <link href="Style.css" rel="stylesheet"> <!-- Link to external CSS file -->
     <style>
         /* Internal CSS for image styling */
-        img {
-            display: block; /* Remove default inline display */
-            margin: 0 auto; /* Center the images horizontally */
-            width: 200px; /* Set a fixed width for the images */
+        .game-img-container {
+            position: relative;
+            width: 100px; /* Set the width of game images */
             height: auto; /* Maintain aspect ratio */
+            overflow: hidden;
             margin-bottom: 20px; /* Add some bottom margin for spacing */
+        }
+
+        .game-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-details {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .game-details h4 {
+            margin-bottom: 5px;
+        }
+
+        .game-details p {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -41,22 +68,31 @@
         <th style="color: skyblue;">Games</th> <!-- Table header for Games -->
         <tr>
             <td>
-                <a href="https://poki.com/en/g/temple-run-2">
-                    <img src="temple" alt="Temple Run 2"> <!-- Image for Temple Run 2 -->
-                </a>
-                <h3>Temple Run 2</h3>
+                <div class="game-img-container">
+                    <a href=""><img src="temple" class="game-img" alt="Temple Run 2"></a> <!-- Image for Temple Run 2 -->
+                    <div class="game-details">
+                        <h4>Temple Run 2</h4>
+                        <p>Game</p>
+                    </div>
+                </div>
             </td>
             <td>
-                <a href="https://poki.com/en/g/burnout-drift-seaport-max">
-                    <img src="drift" alt="Burnout Drift Seaport Max"> <!-- Image for Burnout Drift Seaport Max -->
-                </a>
-                <h3>Burnout Drift Seaport Max</h3>
+                <div class="game-img-container">
+                    <a href=""><img src="drift" class="game-img" alt="Burnout Drift Seaport Max"></a> <!-- Image for Burnout Drift Seaport Max -->
+                    <div class="game-details">
+                        <h4>Burnout Drift Seaport Max</h4>
+                        <p>Game</p>
+                    </div>
+                </div>
             </td>
             <td>
-                <a href="https://poki.com/en/g/penalty-shooters-2">
-                    <img src="penalty" alt="Penalty Shootout 2"> <!-- Image for Penalty Shootout 2 -->
-                </a>
-                <h3>Penalty Shootout 2</h3>
+                <div class="game-img-container">
+                    <a href=""><img src="penalty" class="game-img" alt="Penalty Shootout 2"></a> <!-- Image for Penalty Shootout 2 -->
+                    <div class="game-details">
+                        <h4>Penalty Shootout 2</h4>
+                        <p>Game</p>
+                    </div>
+                </div>
             </td>
         </tr>
     </table>
@@ -64,16 +100,22 @@
         <th style="color: skyblue;">Apps</th> <!-- Table header for Apps -->
         <tr>
             <td>
-                <a href="https://www.nytimes.com/games/wordle/index.html">
-                    <img src="wordle" alt="Woodle"> <!-- Image for Woodle -->
-                </a>
-                <h3>Woodle</h3>
+                <div class="game-img-container">
+                    <a href=""><img src="wordle" class="game-img" alt="Woodle"></a> <!-- Image for Woodle -->
+                    <div class="game-details">
+                        <h4>Woodle</h4>
+                        <p>App</p>
+                    </div>
+                </div>
             </td>
             <td>
-                <a href="https://www.nerdwallet.com/h/category/home-affordability?trk=nw_gn_6.0">
-                    <img src="nerdwallet" alt="Nerdwallet"> <!-- Image for Nerdwallet -->
-                </a>
-                <h3>Nerdwallet</h3>
+                <div class="game-img-container">
+                    <a href=""><img src="nerdwallet" class="game-img" alt="Nerdwallet"></a> <!-- Image for Nerdwallet -->
+                    <div class="game-details">
+                        <h4>Nerdwallet</h4>
+                        <p>App</p>
+                    </div>
+                </div>
             </td>
         </tr>
     </table>   
@@ -96,3 +138,4 @@
 
 </body>
 </html>
+
