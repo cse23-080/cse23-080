@@ -54,11 +54,18 @@
         /* Style for TV show cards */
         .tv-show-card {
             margin-bottom: 20px;
+            text-align: center; /* Center text */
         }
 
         .tv-show-card img {
-            width: 100%;
+            width: 60%; /* Adjusted width */
             height: auto;
+            display: inline-block; /* Align images horizontally */
+            margin-bottom: 10px; /* Add space below image */
+        }
+
+        .tv-show-card p {
+            color: white; /* Text color */
         }
 
         /* Black background for body */
@@ -88,16 +95,17 @@
 
 <main class="container">
     <!-- Placeholder content -->
-    <h1 id="tvshows">Our TV Shows</h1>
+    <h1 id="tvshows">Latest TvShows!!</h1>
 
     <!-- TV Show Cards -->
     <div class="row">
         <!-- TV Show 1 -->
         <div class="col-md-4">
             <div class="tv-show-card">
-                <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank">
-                    <img src="tv_show_1_image.jpg" alt="TV Show 1">
+                <a href="https://www.youtube.com/watch?v=AFUKnherhuw" target="_blank">
+                    <img src="echo" alt="TV Show 1">
                 </a>
+                <p>ECHO|| 133min Theater</p>
             </div>
         </div>
 
@@ -107,6 +115,7 @@
                 <a href="https://www.youtube.com/watch?v=ByAn8DF8Ykk" target="_blank">
                     <img src="lastair" alt="TV Show 2">
                 </a>
+                <p>Last Air bender|| 127min Theater</p>
             </div>
         </div>
 
@@ -116,27 +125,43 @@
                 <a href="https://www.youtube.com/watch?v=xhL5ihOUUcs" target="_blank">
                     <img src="doc" alt="TV Show 3">
                 </a>
+                <p>Doctor 2|| 123min Theater</p>
             </div>
         </div>
+    </div>
+     <h1 id="tvshows">Top Treanding TvShows</h1>
 
-        <!-- TV Show 4 -->
+    <!-- TV Show Cards -->
+    <div class="row">
+        <!-- TV Show 1 -->
         <div class="col-md-4">
             <div class="tv-show-card">
-                <a href="https://www.youtube.com/watch?v=V-mugKDQDlg" target="_blank">
-                    <img src="fallout" alt="TV Show 4">
+                <a href="https://www.youtube.com/watch?v=AFUKnherhuw" target="_blank">
+                    <img src="echo" alt="TV Show 1">
                 </a>
+                <p>ECHO || 133min Theater</p>
             </div>
         </div>
 
-        <!-- TV Show 5 -->
+        <!-- TV Show 2 -->
         <div class="col-md-4">
             <div class="tv-show-card">
-                <a href="https://www.youtube.com/watch?v=FwiU4O5Cxrc" target="_blank">
-                    <img src="love" alt="TV Show 5">
+                <a href="https://www.youtube.com/watch?v=V-mugKDQDlg&t=1s" target="_blank">
+                    <img src="fallout" alt="TV Show 2">
                 </a>
+                <p>Fallout || 127min Theater</p>
             </div>
         </div>
 
+        <!-- TV Show 3 -->
+        <div class="col-md-4">
+            <div class="tv-show-card">
+                <a href="https://www.youtube.com/watch?v=ByAn8DF8Ykk" target="_blank">
+                    <img src="lastair" alt="TV Show 3">
+                </a>
+                <p>Last Air Bender|| 123min Theater</p>
+            </div>
+        </div>
     </div>
 </main>
 
