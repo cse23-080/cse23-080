@@ -94,10 +94,11 @@
 
         /* CSS for header section */
         header {
+            position: relative; /* Make it a reference point for absolute positioning */
+            height: 300px; /* Set the height of the header */
             background-image: url('back2'); /* Background image */
             background-size: cover; /* Cover the entire header */
             background-position: center; /* Center the background image */
-            height: 300px; /* Set the height of the header */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -105,10 +106,19 @@
             color: white; /* Text color */
             font-size: 24px; /* Adjust font size as needed */
         }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
     </style>
 </head>
 <body>
 <header>
+    <div class="logo">
+        <img src="warner bros" alt="Warner Bros Logo">
+    </div>
     <h1>Welcome to Our Site</h1>
 </header>
 
