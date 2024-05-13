@@ -12,8 +12,9 @@
        
         /* CSS for footer background */
         footer {
-            background-color: grey; /* Gray background */
+            background-color: black; /* Set footer background color to black */
             padding: 20px; /* Add some padding for spacing */
+            color: white; /* Set text color to white */
         }
 
         /* Style for video background */
@@ -55,9 +56,25 @@
                 max-height: 250px; /* Adjust the maximum height for small screens */
             }
         }
+
+        /* Image below the Explore button */
+        .image-below-explore {
+            text-align: center; /* Center the image */
+            margin-top: 20px; /* Add margin for spacing */
+        }
+
+        .image-below-explore img {
+            width: 60%; /* Set the width of the image */
+            opacity: 0.5; /* Set initial opacity */
+            transition: opacity 0.3s ease; /* Add transition effect */
+        }
+
+        .image-below-explore img:hover {
+            opacity: 1; /* Change opacity on hover */
+        }
     </style>
 </head>
-<body>
+<body style="background-color: black;"> <!-- Set body background color to black -->
     
 <header>
     <!-- Logo -->
@@ -125,6 +142,11 @@
     <!-- Centered "Explore" button -->
     <div class="button-container">
         <a href="https://cse23-080.github.io/cse23-080/Movie.html" class="btn btn-primary">Explore</a>
+    </div>
+    <!-- Image below the Explore button -->
+    <div class="image-below-explore">
+        <img src="echo" alt="Image below Explore button">
+        <p><i>Young Maya Lopez leaves her hometown of Tamaha, Oklahoma following her mother's death and moves to New York City, where Wilson Fisk raises her to be a ruthless assassin.</i></p>
     </div>
 </main>
 
