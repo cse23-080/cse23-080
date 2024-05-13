@@ -6,9 +6,60 @@
     <title>Welcome to Warner Bros</title>
     <link href="Style.css" rel="stylesheet"> <!-- Link to external CSS file -->
     <style>
+        /* Reset default margin and padding */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set background color of the page to black */
+        body {
+            background-color: black; /* Dark gray background color */
+            color: white; /* Set text color to white */
+            font-family: Arial, sans-serif; /* Use a common font for better readability */
+        }
+
+        /* Additional CSS for navigation buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: flex-end; /* Align buttons to the far right */
+            padding: 10px 20px;
+            background-color: #333; /* Darker gray background color */
+        }
+
+        .nav-buttons a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px; /* Make it an oval shape */
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            background-color: skyblue; /* Dark gray on hover */
+        }
+
+        /* Additional CSS for tables */
+        table {
+            width: 100%; /* Set width to 100% */
+            border-collapse: collapse;
+            margin-top: 20px; /* Add margin to the top */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #555;
+            text-align: center;
+        }
+
+        /* Additional CSS for images */
         img {
-            max-width: 200px; /* Set maximum width for images */
+            width: 100%; /* Set width to 100% */
             height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove default inline display */
+            margin: 0 auto; /* Center the images */
+            max-width: 200px; /* Set maximum width for images */
         }
     </style> <!-- Internal CSS for image styling -->
 </head>
@@ -37,23 +88,20 @@
         <th style="color: skyblue;">Games</th> <!-- Table header for Games -->
         <tr>
             <td>
-                
                 <a href="https://poki.com/en/g/temple-run-2">
-                <img src="temple" alt="Example Image"> <!-- Image for Temple Run 2 -->
+                    <img src="temple" alt="Example Image"> <!-- Image for Temple Run 2 -->
                 </a>
                 <h3>Temple Run 2</h3>
             </td>
             <td>
-                
                 <a href="https://poki.com/en/g/burnout-drift-seaport-max">
-                <img src="drift" alt="Example Image"> <!-- Image for Burnout Drift Seaport Max -->
+                    <img src="drift" alt="Example Image"> <!-- Image for Burnout Drift Seaport Max -->
                 </a>
                 <h2>Burnout Drift Seaport Max</h2>
             </td>
             <td>
-                
                 <a href="https://poki.com/en/g/penalty-shooters-2">
-                <img src="penalty" alt="Example Image"> <!-- Image for Penalty Shootout 2 -->
+                    <img src="penalty" alt="Example Image"> <!-- Image for Penalty Shootout 2 -->
                 </a>
                 <h3>Penalty Shootout 2</h3>
             </td>
@@ -63,16 +111,14 @@
         <th style="color: skyblue;">Apps</th> <!-- Table header for Apps -->
         <tr>
             <td>
-                
                 <a href="https://www.nytimes.com/games/wordle/index.html">
-                <img src="wordle" alt="Example Image"> <!-- Image for Woodle -->
+                    <img src="wordle" alt="Example Image"> <!-- Image for Woodle -->
                 </a>
                 <h3>Woodle</h3>
             </td>
             <td>
-                
                 <a href="https://www.nerdwallet.com/h/category/home-affordability?trk=nw_gn_6.0">
-                <img src="nerdwallet" alt="Example Image"> <!-- Image for Nerdwallet -->
+                    <img src="nerdwallet" alt="Example Image"> <!-- Image for Nerdwallet -->
                 </a>
                 <h3>Nerdwallet</h3>
             </td>
@@ -97,3 +143,4 @@
 
 </body>
 </html>
+
