@@ -1,140 +1,210 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Warner Bros</title>
-    <link href="Style.css" rel="stylesheet"> <!-- Link to external CSS file -->
+    <link href="Style.css" rel="stylesheet">
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Internal CSS for image styling */
-        .game-img-container {
-            position: relative;
-            width: 100px; /* Set the width of game images */
-            height: auto; /* Maintain aspect ratio */
-            overflow: hidden;
-            margin-bottom: 20px; /* Add some bottom margin for spacing */
+        /* CSS for image pop-up effect and full-screen fit */
+       
+        /* CSS for footer background */
+        footer {
+            background-color: black; /* Black background */
+            color: white; /* Text color */
+            padding: 20px; /* Add some padding for spacing */
         }
 
-        .game-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .game-details {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
+        /* Style for header background image */
+        header {
+            background-image: url('back2'); /* Replace 'your_image.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Set header height to full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            color: white; /* Text color for better visibility */
         }
 
-        .game-details h4 {
-            margin-bottom: 5px;
+        /* Increase image size in the carousel */
+        .carousel-item img {
+            max-height: 400px; /* Adjust the maximum height as needed */
+            max-width: 80%; /* Adjust the maximum width */
+            margin: 0 auto; /* Center the images */
         }
 
-        .game-details p {
-            margin-bottom: 0;
+        /* Center the "Explore" button */
+        .button-container {
+            text-align: center;
+            margin-top: 20px; /* Add some margin for spacing */
+        }
+
+        /* Additional styles as needed */
+
+        /* Media query for small screens */
+        @media (max-width: 576px) {
+            .carousel-item img {
+                max-height: 250px; /* Adjust the maximum height for small screens */
+            }
+        }
+
+        /* Style for TV show cards */
+        .tv-show-card {
+            margin-bottom: 20px;
+            text-align: center; /* Center text */
+        }
+
+        .tv-show-card img {
+            width: 100%; /* Make the image take the full width of its container */
+            height: auto;
+            display: block; /* Change to block display */
+            margin-bottom: 10px; /* Add space below image */
+        }
+
+        .tv-show-card p {
+            color: white; /* Text color */
+        }
+
+        /* Black background for body */
+        body {
+            background-color: black;
+            color: white; /* Text color */
         }
     </style>
-</head> 
+</head>
 <body>
-
+    
 <header>
     <!-- Logo -->
     <div class="logo">
-        <img src="warner bros" alt="Warner Bros Logo"> <!-- Warner Bros Logo -->
+        <img src="warner bros" alt="Warner Bros Logo">
     </div>
 
     <!-- Navigation -->
     <div class="buttons-container">
-        <a href="https://cse23-080.github.io/cse23-080/home.html"><img src="home1" width="40" height="40" /> Home</a> <!-- Home link with image -->
-        <a href="https://cse23-080.github.io/cse23-080/Movie.html"><img src="movies" width="40" height="40" /> Movies</a> <!-- Movies link with image -->
-        <a href="https://cse23-080.github.io/cse23-080/TvShows.html"><img src="tv" width="40" height="40" /> Tv Shows</a> <!-- Tv Shows link with image -->
-        <a href="https://cse23-080.github.io/cse23-080/Apps&Games.html"><img src="game" width="40" height="40" /> Apps & Games</a> <!-- Apps & Games link with image -->
-        <a href="https://cse23-080.github.io/cse23-080/collections.html#about"><img src="collec.jpg" width="40" height="40" /> Collection</a> <!-- Collection link with image -->
+        <a href="https://cse23-080.github.io/cse23-080/home.html"><img src="home1" width="40" height="40" /> Home</a>
+        <a href="https://cse23-080.github.io/cse23-080/Movie.html"><img src="movies" width="40" height="40" /> Movies</a>
+        <a href="https://cse23-080.github.io/cse23-080/TvShows.html"><img src="tv" width="40" height="40" /> Tv Shows</a>
+        <a href="https://cse23-080.github.io/cse23-080/Apps&Games.html"><img src="game" width="40" height="40" /> Apps & Games</a>
+        <a href="https://cse23-080.github.io/cse23-080/collections.html"><img src="collec.jpg" width="40" height="40" /> Collection</a>
     </div>
 </header>
 
-<!-- Body content -->
-<body>
-    <h1>Apps & Games</h1>
-    <table>
-        <th style="color: skyblue;">Games</th> <!-- Table header for Games -->
-        <tr>
-            <td>
-                <div class="game-img-container">
-                    <a href=""><img src="temple" class="game-img" alt="Temple Run 2"></a> <!-- Image for Temple Run 2 -->
-                    <div class="game-details">
-                        <h4>Temple Run 2</h4>
-                        <p>Game</p>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="game-img-container">
-                    <a href=""><img src="drift" class="game-img" alt="Burnout Drift Seaport Max"></a> <!-- Image for Burnout Drift Seaport Max -->
-                    <div class="game-details">
-                        <h4>Burnout Drift Seaport Max</h4>
-                        <p>Game</p>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="game-img-container">
-                    <a href=""><img src="penalty" class="game-img" alt="Penalty Shootout 2"></a> <!-- Image for Penalty Shootout 2 -->
-                    <div class="game-details">
-                        <h4>Penalty Shootout 2</h4>
-                        <p>Game</p>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <th style="color: skyblue;">Apps</th> <!-- Table header for Apps -->
-        <tr>
-            <td>
-                <div class="game-img-container">
-                    <a href=""><img src="wordle" class="game-img" alt="Woodle"></a> <!-- Image for Woodle -->
-                    <div class="game-details">
-                        <h4>Woodle</h4>
-                        <p>App</p>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="game-img-container">
-                    <a href=""><img src="nerdwallet" class="game-img" alt="Nerdwallet"></a> <!-- Image for Nerdwallet -->
-                    <div class="game-details">
-                        <h4>Nerdwallet</h4>
-                        <p>App</p>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>   
-</body>
+<main class="container">
+    <!-- Placeholder content -->
+    <h1 id="tvshows">Games</h1>
 
-<!-- Footer -->
+    <!-- TV Show Cards -->
+    <div class="row">
+        <!-- TV Show 1 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://poki.com/en/g/offroader-v5" target="_blank">
+                    <img src="drift" alt="TV Show 1">
+                </a>
+                <p>Drift Motors</p>
+            </div>
+        </div>
+
+        <!-- TV Show 2 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://poki.com/en/g/temple-run-2" target="_blank">
+                    <img src="temple" alt="TV Show 2">
+                </a>
+                <p>Temple Run 2</p>
+            </div>
+        </div>
+
+        <!-- TV Show 3 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://poki.com/en/g/penalty-shooters-2" target="_blank">
+                    <img src="penalty" alt="TV Show 3">
+                </a>
+                <p>Penalty shootout</p>
+            </div>
+        </div>
+
+        <!-- TV Show 4 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank">
+                    <img src="wordle" alt="TV Show 4">
+                </a>
+                <p>Wordle</p>
+            </div>
+        </div>
+    </div>
+     <h1 id="tvshows">Apps</h1>
+
+    <!-- TV Show Cards -->
+    <div class="row">
+        <!-- TV Show 1 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.thenetwallet.com/" target="_blank">
+                    <img src="netwallet" alt="TV Show 1">
+                </a>
+                <p>NetWallet</p>
+            </div>
+        </div>
+
+        <!-- TV Show 2 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.pinterest.com/" target="_blank">
+                    <img src="print" alt="TV Show 2">
+                </a>
+                <p>Printrest</p>
+            </div>
+        </div>
+
+        <!-- TV Show 3 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.amazon.com/" target="_blank">
+                    <img src="amazon" alt="TV Show 3">
+                </a>
+                <p>Amazon</p>
+            </div>
+        </div>
+
+        <!-- TV Show 4 -->
+        <div class="col-md-3"> <!-- Adjusted column size to fit 4 items in a row -->
+            <div class="tv-show-card">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="instagram" alt="TV Show 4">
+                </a>
+                <p>Instagram</p>
+            </div>
+        </div>
+    </div>
+</main>
+
 <footer>
-    <h2>About Us....</h2>
     <p>&copy; 2024 Warner Bros. All rights reserved.</p>
-    <ul>
-        <li><a href="https://cse23-080.github.io/cse23-080/feedback.html">Feedback..</a></li> <!-- Feedback link -->
-    </ul>
+    <p>Learn more about our company and mission.</p>
+    <p><i>Welcome to Warner Bros, where cinematic magic meets timeless storytelling. From iconic classics to groundbreaking blockbusters, our films inspire and entertain. With innovation and passion, we shape the future of entertainment, one unforgettable story at a time.</i></p>
+    <div class="buttons-container">
+        <a href="https://cse23-080.github.io/cse23-080/feedback.html">Feedback</a>
+    </div>
     <div class="social-links">
-        <a href="https://www.instagram.com/theo_molefhe23/" target="_blank"> <img width="40" height="40" src="instagram" alt="Instagram"></a> <!-- Instagram link with image -->
-        <a href="https://www.facebook.com/theomolf.kingtr.5/" target="_blank"> <img width="40" height="40" src="facebook" alt="Facebook"></a> <!-- Facebook link with image -->
-        <a href="https://wa.me/your_+26777025359" target="_blank"> <img width="40" height="40" src="whatsapp" alt="WhatsApp"></a> <!-- Whatsapp link with image -->
-        <a href="https://www.tiktok.com/@andilethero" target="_blank"> <img width="40" height="40" src="tiktok" alt="Tiktok"></a> <!-- Tiktok link with image -->
+        <a href="https://www.instagram.com/theo_molefhe23/" target="_blank"> <img width="40" height="40" src="instagram" alt="instagram"></a>
+        <a href="https://www.facebook.com/theomolf.kingtr.5/" target="_blank"> <img width="40" height="40" src="facebook" alt="facebook"></a>
+        <a href="https://wa.me/your_+26777025359" target="_blank"> <img width="40" height="40" src="whatsapp" alt="whatapp"></a>
+        <a href="https://www.tiktok.com/@andilethero" target="_blank"> <img width="40" height="40" src="tiktok" alt="tiktok"></a>
     </div>
 </footer>
+
+<!-- Include Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
