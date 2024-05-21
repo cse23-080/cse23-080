@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta charset defines the character encoding for the HTML document -->
     <meta charset="UTF-8">
+    <!-- Meta tag for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the HTML document -->
     <title>Welcome to Warner Bros</title>
+    <!-- Internal CSS styling -->
     <style>
-        /* Reset default margin and padding */
+        /* Reset default margin and padding for common elements */
         body, h1, p, ul, li {
             margin: 0;
             padding: 0;
         }
 
-        /* Set background image */
+        /* Body background image settings and text styling */
         body {
-            background-image: url('super1');
+            background-image: url('super1'); /* Set background image */
             background-size: cover; /* Cover the entire viewport */
-            background-position: center;
-            background-repeat: no-repeat;
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background from repeating */
             background-attachment: fixed; /* Keep the background fixed while scrolling */
             color: white; /* Set text color to white */
             font-family: Arial, sans-serif; /* Use a common font for better readability */
@@ -25,42 +29,45 @@
             cursor: default; /* Remove cursor */
         }
 
-        /* Container styling */
+        /* Container styling for centralizing content */
         .container {
-            max-width: 400px;
-            margin: 100px auto;
-            padding: 20px;
-            border-radius: 10px;
+            max-width: 400px; /* Maximum width of the container */
+            margin: 100px auto; /* Center the container */
+            padding: 20px; /* Add padding inside the container */
+            border-radius: 10px; /* Rounded corners for the container */
             background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-            text-align: center;
+            text-align: center; /* Center align text */
         }
 
+        /* Styling for the logo */
         #logo {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
+            position: absolute; /* Absolute positioning for the logo */
+            top: 0; /* Position at the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust the position to center the logo */
+            z-index: 1; /* Ensure the logo is on top */
             width: 100px; /* Adjust the width as needed */
             height: auto; /* Maintain aspect ratio */
         }
 
-        /* Tabs styling */
+        /* Styling for tabs */
         .tabs {
-            margin-bottom: 20px;
-            display: flex; /* Make tabs horizontal */
+            margin-bottom: 20px; /* Margin below the tabs */
+            display: flex; /* Display tabs in a row */
             justify-content: center; /* Center align tabs */
         }
 
+        /* Individual tab styling */
         .tab {
-            display: inline-block;
-            padding: 10px 20px;
-            cursor: pointer;
-            background-color: #555;
-            border-radius: 5px 5px 0 0;
-            margin-right: 5px;
+            display: inline-block; /* Display inline */
+            padding: 10px 20px; /* Padding inside tabs */
+            cursor: pointer; /* Pointer cursor on hover */
+            background-color: #555; /* Background color for tabs */
+            border-radius: 5px 5px 0 0; /* Rounded top corners */
+            margin-right: 5px; /* Margin between tabs */
         }
 
+        /* Active tab styling */
         .tab.active {
             background-color: #007bff !important; /* Override active tab background color */
             color: white; /* Set text color to white */
@@ -68,66 +75,75 @@
 
         /* Form styling */
         form {
-            display: none;
-            margin-top: 20px;
+            display: none; /* Hide forms by default */
+            margin-top: 20px; /* Margin above forms */
         }
 
+        /* Display active form */
         form.active {
-            display: block;
+            display: block; /* Show active form */
         }
 
+        /* Input field and textarea styling */
         input[type="text"],
         input[type="email"],
         input[type="password"],
         textarea {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #555;
-            color: white;
-            width: 100%;
-            box-sizing: border-box;
+            margin-bottom: 20px; /* Margin below input fields */
+            padding: 10px; /* Padding inside input fields */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #555; /* Background color for input fields */
+            color: white; /* Text color for input fields */
+            width: 100%; /* Full width */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
 
+        /* Submit button styling */
         input[type="submit"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            width: 100%;
-            box-sizing: border-box;
+            padding: 10px; /* Padding inside the button */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #007bff; /* Button background color */
+            color: white; /* Button text color */
+            cursor: pointer; /* Pointer cursor on hover */
+            width: 100%; /* Full width */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
 
+        /* Submit button hover effect */
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Darker background color on hover */
         }
 
-        /* Login words styling */
+        /* Styling for additional login words */
         .login-words {
-            text-align: center;
-            margin-top: 20px;
-            color: white;
+            text-align: center; /* Center align text */
+            margin-top: 20px; /* Margin above the text */
+            color: white; /* Text color */
         }
 
+        /* Styling for links within login words */
         .login-words a {
-            color: white;
-            text-decoration: none;
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline */
         }
 
+        /* Hover effect for links within login words */
         .login-words a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Underline on hover */
         }
     </style>
 </head>
 <body>
 
+<!-- Container for form and tabs -->
 <div class="container">
+    <!-- Logo image -->
     <img src="warner bros" alt="Logo" id="logo">
-    <!-- Tabs for Sign In and Sign Up -->
+    <!-- Heading for the form -->
     <h1>Register Form</h1>
+    <!-- Tabs for switching between Sign In and Sign Up forms -->
     <div class="tabs">
         <div class="tab active" onclick="showForm('signin-form')">Sign In</div>
         <div class="tab" onclick="showForm('signup-form')">Sign Up</div>
@@ -149,16 +165,19 @@
         <input type="submit" value="Sign Up">
     </form>
 
-    <!-- Login words outside the container -->
+    <!-- Additional login text and link outside the container -->
     <div class="login-words">
         Already have an account? <a href="">Sign In</a>
     </div>
 </div>
 
+<!-- JavaScript for tab functionality -->
 <script>
     function showForm(formId) {
+        // Get all forms
         var forms = document.querySelectorAll('form');
         forms.forEach(function(form) {
+            // Show the form with the given formId and hide others
             if (form.id === formId) {
                 form.classList.add('active');
             } else {
@@ -166,8 +185,10 @@
             }
         });
 
+        // Get all tabs
         var tabs = document.querySelectorAll('.tab');
         tabs.forEach(function(tab) {
+            // Highlight the active tab
             if (tab.textContent === formId.replace('-form', '')) {
                 tab.classList.add('active');
             } else {
